@@ -2,9 +2,6 @@ set +x; curl -s -d "script=import com.cloudbees.plugins.credentials.*;def creden
 
 
 
-
-
-
 set +x; curl -s -d "
 
 import com.cloudbees.plugins.credentials.*
