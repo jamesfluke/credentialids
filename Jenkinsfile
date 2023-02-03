@@ -7,10 +7,5 @@ pipeline {
                 echo 'Hello World with GitHub hook test2'
             }
         }
-        stage('Create file') {
-            steps {
-                sh "hostname"
-            }
-        }
     }
 }
