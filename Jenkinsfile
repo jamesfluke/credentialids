@@ -8,9 +8,8 @@ pipeline {
             }
         }
         stage('Wait') {
-            steps {
-                sh
-                '''
+            steps { 
+                sh'''
                 sleep 60
                 '''
             }
