@@ -7,5 +7,13 @@ pipeline {
                 echo 'Hello World with GitHub hook5'
             }
         }
+        stage('Wait') {
+            steps {
+                sh
+                '''
+                sleep 60
+                '''
+            }
+        }
     }
 }
