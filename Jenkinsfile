@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World with GitHub hook6'
+                echo 'Hello World with GitHub hook'
             }
         }
         stage('Wait') {
