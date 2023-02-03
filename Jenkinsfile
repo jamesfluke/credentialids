@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Create file') {
             steps {
-                sh "touch /users/jfluckiger/AWESOMEFILE"
+                sh "hostname"
             }
         }
     }
