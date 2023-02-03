@@ -9,9 +9,7 @@ pipeline {
         }
         stage('Wait') {
             steps { 
-                sh'''
-                sleep 60
-                '''
+                sleep time: 2, unit: 'MINUTES'
             }
         }
     }
