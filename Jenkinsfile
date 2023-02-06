@@ -12,7 +12,6 @@ pipeline {
                 sleep time: 2, unit: 'MINUTES'
             }
         }
-    }
         stage('CredentialIDs') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'credentialidtoken', passwordVariable: '1187dc0c09ba60479fff9739bf01b8c748', usernameVariable: 'credentialid')]) {
@@ -21,4 +20,5 @@ pipeline {
                 }
             }
         }
+    }
 }
