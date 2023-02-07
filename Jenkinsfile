@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "controller"}
+    agent {label "linux"}
 
     stages {
         stage('Main') {
