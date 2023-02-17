@@ -13,9 +13,18 @@ pipeline {
         stage('Compare names to controller') {
             steps {
                 sh '''
-                while read line; do
-                    echo "$p"
-                done < credentialIds.txt
+                cat credentialIds.txt | while read line; 
+                do
+                    echo "$line"
+                    echo "searching for $line"
+                    if grep --include=build.xml -rnw "/var/lib/cloudbees-core-cm/jobs/" -e $line; then
+                        echo "Found $line"
+                        echo $line >> results.txt
+                        break
+                    else
+                        echo "Didn't find $line"
+                    fi
+                done
                 '''
 
                 // sh '''
