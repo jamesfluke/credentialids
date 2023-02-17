@@ -17,12 +17,12 @@ pipeline {
                 do
                     echo "$line"
                     echo "searching for $line"
-                    //if grep --include=build.xml -rnw "/var/lib/cloudbees-core-cm/jobs/" -e $line; then
+                    #if grep --include=build.xml -rnw "/var/lib/cloudbees-core-cm/jobs/" -e $line; then
                     if grep --include=build.xml -rn "/var/lib/cloudbees-core-cm/jobs/" -e $line; then
-                        //echo "Found $line"
+                        #echo "Found $line"
                         echo $line >> results.txt
                         break
-                    //else
+                    #else
                         //echo "Didn't find $line"
                     fi
                 done
