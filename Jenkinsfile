@@ -25,6 +25,7 @@ pipeline {
                         echo "Didn't find $line"
                     fi
                 done
+                cat results.txt
                 '''
 
                 // sh '''
