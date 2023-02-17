@@ -12,10 +12,11 @@ pipeline {
         }
         stage('Compare names to controller') {
             steps {
+                sh '''
                 while read line.txt; do
                     echo "$p"
                 done < credentialIds.txt
-
+                '''
 
                 // sh '''
                 // list=$(cat list.txt)
