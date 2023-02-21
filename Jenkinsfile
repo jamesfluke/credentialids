@@ -15,7 +15,7 @@ pipeline {
         stage('Compare names to controller') {
             steps {
                 sh '''
-                sh '[ -e results.txt ] && rm results.txt'
+                sh 'echo "" > results.txt'
                 cat credentialIds.txt | while read line; 
                 do
                     echo "$line"
