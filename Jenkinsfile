@@ -18,10 +18,12 @@ pipeline {
                 cat credentialIds.txt | while read line; 
                 do
                     echo "searching for $line"
-                    if grep --include=build.xml -rn "$JENKINS_HOME/jobs/" -e $line; then
-                        echo $line >> results.txt
-                        break
-                    fi
+                    if grep --include=build.xml -rn "$JENKINS_HOME/jobs/" -e "$line"; then
+                    grep --include=build.xml -rn "$JENKINS_HOME/jobs/" -e "$line" | while read result; 
+                    do
+                        echo "$result" >> results.txt
+                    done
+            fi
                 done
                 cat results.txt
                 '''
