@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "controller"}
+    agent {any}
 
     stages {
         stage('GetCredentialIDs') {
